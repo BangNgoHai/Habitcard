@@ -1,0 +1,75 @@
+.trends-container {
+    width: 50%;
+    height: 100%;
+    background: white;
+    border: 2px solid #666;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 8px 8px 0 0 #666;
+    transition: all 0.2s ease;
+}
+.header {
+    text-align: center;
+    height: 15%;
+    margin: 0;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+    height: 85%;
+    padding: 0;
+    background-color: #f8f9fa;  /* Nền xám nhạt để thấy rõ vùng content */
+    border-radius: 8px;
+}
+
+.column-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;  /* Chiếm toàn bộ chiều cao content */
+    justify-content: flex-end;  /* Đẩy cột xuống dưới */
+}
+
+.column {
+    width: 30px;
+    background: linear-gradient(180deg, #00fbc5 0%, #00ea7d 100%);
+    border-radius: 8px 8px 0 0;
+    transition: height 0.3s ease;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Bóng đổ phía trên */
+    /* Chiều cao sẽ được set inline từ component */
+}
+
+.label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .content {
+        height: 300px;  /* Giảm chiều cao trên mobile */
+        gap: 10px;
+    }
+    
+    .column {
+        width: 40px;
+    }
+    
+    .label {
+        font-size: 12px;
+    }
+}
