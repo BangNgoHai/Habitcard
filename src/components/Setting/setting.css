@@ -63,12 +63,12 @@ body {
 }
 
 .arrow-btn:hover {
-    background: #e0e0e0;  /* Màu xám khi hover */
+    background: #e0e0e0;
     color: #000;
 }
 
 .arrow-btn:active {
-    background: #b0b0b0;  /* Màu xám đậm hơn khi click */
+    background: #b0b0b0;
     transform: scale(0.95);
 }
 
@@ -158,13 +158,11 @@ body {
     border: 2px solid transparent;
 }
 
-/* Hover effect */
 .navbar a:hover {
     color: #000;
     background: #f0f0f0;
 }
 
-/* Active/Current page - mặc định Week đang được chọn */
 .navbar a:first-child {
     background: #000;
     color: white;
@@ -172,7 +170,6 @@ body {
     box-shadow: 3px 3px 0 0 #666;
 }
 
-/* Nếu bạn muốn dùng class active thay vì first-child */
 .navbar a.active {
     background: #000;
     color: white;
@@ -205,58 +202,237 @@ body {
     box-shadow: 5px 5px 0 0 #000;
 }
 
-/* Nút MY HABITS */
 .habit-manage-btn {
     background: #8DB1D1;
 }
 
-/* Nút STREAK */
 .streak-count-btn {
     color: #000;
 }
 
-/* Hover effect - bị lún xuống mất shadow */
 .setting-footer button:hover {
     transform: translate(3px, 3px);
     box-shadow: 2px 2px 0 0 #000;
 }
 
-/* Active effect - lún sâu hơn */
 .setting-footer button:active {
     transform: translate(5px, 5px);
     box-shadow: none;
 }
 
-/* Responsive cho mobile */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE CHO IPAD (768px - 1024px) ===== */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
     .setting-container {
-        padding: 16px;
+        width: 40%; /* Tăng width cho iPad */
+        padding: 15px;
+        box-shadow: 6px 6px 0 0 #666;
+        border-radius: 14px;
     }
 
-    .header {
-        flex-direction: column;
+    .setting-header {
         gap: 12px;
     }
 
     .date-range {
-        flex: 0 0 100%;
+        border-width: 1.5px;
+    }
+
+    .arrow-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .date-display {
+        font-size: 11px;
+    }
+
+    .setting-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        border-width: 1.5px;
+    }
+
+    .navbar {
+        padding: 8px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        border-width: 1.5px;
+        border-radius: 10px;
+    }
+
+    .navbar a {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-width: 1.5px;
+    }
+
+    .navbar a:first-child {
+        box-shadow: 2px 2px 0 0 #666;
+    }
+
+    .setting-footer {
+        gap: 14px;
+    }
+
+    .setting-footer button {
+        padding: 14px 16px;
+        font-size: 13px;
+        border-width: 1.5px;
+        box-shadow: 4px 4px 0 0 #000;
+    }
+
+    .setting-footer button:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 0 #000;
+    }
+
+    .setting-footer button:active {
+        transform: translate(4px, 4px);
+    }
+}
+
+/* ===== RESPONSIVE CHO IPHONE (tối đa 768px) ===== */
+@media screen and (max-width: 768px) {
+    .setting-container {
+        width: 90%; /* Rộng hơn trên mobile */
+        height: auto;
+        padding: 15px;
+        margin: 15px auto;
+        box-shadow: 5px 5px 0 0 #666;
+        border-radius: 14px;
+        border-width: 1.5px;
+    }
+
+    .setting-header {
+        gap: 10px;
+        flex-wrap: wrap; /* Cho phép xuống dòng nếu cần */
+    }
+
+    .date-range {
+        width: 75%; /* Giảm nhẹ để vừa */
+        border-width: 1.5px;
+    }
+
+    .arrow-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .arrow-left::before,
+    .arrow-right::before {
+        font-size: 13px;
+    }
+
+    .date-display {
+        font-size: 10px;
+    }
+
+    .btn-range {
+        width: 20%;
+    }
+
+    .setting-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        border-width: 1.5px;
+    }
+
+    .navbar {
+        padding: 8px 5px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        gap: 5px;
+        border-width: 1.5px;
+        border-radius: 10px;
+    }
+
+    .navbar a {
+        padding: 8px 5px;
+        font-size: 13px;
+        border-width: 1.5px;
+    }
+
+    .navbar a:first-child {
+        box-shadow: 2px 2px 0 0 #666;
+    }
+
+    .setting-footer {
+        gap: 12px;
+        flex-direction: row; /* Giữ nguyên hàng ngang */
+        padding-top: 5px;
+    }
+
+    .setting-footer button {
+        padding: 12px 10px;
+        font-size: 12px;
+        border-width: 1.5px;
+        box-shadow: 4px 4px 0 0 #000;
+        white-space: nowrap; /* Giữ chữ trên 1 dòng */
+    }
+
+    .setting-footer button:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 0 #000;
+    }
+
+    .setting-footer button:active {
+        transform: translate(4px, 4px);
+    }
+}
+
+/* ===== CHO IPHONE NHỎ (dưới 375px) ===== */
+@media screen and (max-width: 375px) {
+    .setting-container {
+        width: 95%;
+        padding: 12px;
+        box-shadow: 4px 4px 0 0 #666;
+        border-radius: 12px;
+    }
+
+    .setting-header {
+        flex-direction: column; /* Chuyển thành cột khi quá nhỏ */
+        gap: 8px;
+    }
+
+    .date-range {
         width: 100%;
     }
 
     .btn-range {
         width: 100%;
-    }
-
-    .date-display {
-        font-size: 16px;
-    }
-
-    .footer {
-        flex-direction: column;
+        justify-content: center;
     }
 
     .navbar a {
-        padding: 10px;
-        font-size: 14px;
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+
+    .setting-footer {
+        gap: 8px;
+    }
+
+    .setting-footer button {
+        padding: 10px 5px;
+        font-size: 11px;
+        white-space: normal; /* Cho phép xuống dòng nếu cần */
+        word-break: break-word;
+    }
+}
+
+/* ===== GIỮ NGUYÊN RESPONSIVE CŨ CỦA BẠN NHƯNG ĐÃ TỐI ƯU ===== */
+@media (max-width: 600px) {
+    /* Ghi đè hoặc bổ sung cho phần này */
+    .setting-container {
+        /* Giữ nguyên style từ media query trên */
+    }
+
+    /* Chỉ giữ lại những gì cần thiết từ media query cũ */
+    .date-display {
+        font-size: 11px; /* Điều chỉnh lại */
     }
 }

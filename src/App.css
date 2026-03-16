@@ -6,7 +6,7 @@
   margin: 0;
 }
 
-body{
+body {
   background-color: #fae1dd;
   min-height: 100vh;
   min-width: 100vw;
@@ -17,30 +17,25 @@ body{
   padding: 10px;
   letter-spacing: 0.15rem;
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
-.route-container{
+.route-container {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100vh; /* Cần điều chỉnh trên mobile */
 }
 
-.upper-container{
+.upper-container {
   width: 100vw;
   height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap : 20px;
+  gap: 20px;
   padding: 10px;
 }
 
-.lower-container{
+.lower-container {
   height: 60vh;
   width: 100vw;
   display: flex;
@@ -50,4 +45,68 @@ body{
   padding: 10px;
 }
 
+/* ===== RESPONSIVE CHO IPAD (max-width: 1024px) ===== */
+@media screen and (max-width: 1024px) {
+  .upper-container {
+    flex-direction: column;  /* Xếp dọc */
+    height: auto;            /* Chiều cao tự động theo nội dung */
+    gap: 30px;               /* Tăng khoảng cách giữa các component */
+  }
 
+  /* Các component con chiếm toàn bộ chiều rộng */
+  .upper-container > * {
+    width: 100% !important;  /* Ghi đè width từ component */
+    margin: 0 auto;          /* Canh giữa */
+  }
+
+  /* Điều chỉnh route-container bên trong Setting */
+  .route-container {
+    height: auto;            /* Tránh chiếm quá nhiều không gian */
+    min-height: 300px;       /* Đảm bảo đủ chỗ cho nội dung */
+  }
+
+  .lower-container {
+    height: auto;
+    min-height: 40vh;        /* Giảm nhẹ để cân đối */
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* ===== RESPONSIVE CHO IPHONE (max-width: 768px) ===== */
+@media screen and (max-width: 768px) {
+  .upper-container {
+    gap: 20px;
+  }
+
+  .upper-container > * {
+    width: 100% !important;
+  }
+
+  .route-container {
+    height: auto;
+    min-height: 250px;       /* Nhỏ hơn cho iPhone */
+  }
+
+  .lower-container {
+    min-height: 30vh;
+    font-size: 1rem;         /* Giảm font cho văn bản trong lower-container */
+  }
+
+  /* Điều chỉnh body padding */
+  body {
+    padding: 5px;
+  }
+}
+
+/* ===== CHO MÀN HÌNH RẤT NHỎ (dưới 375px) ===== */
+@media screen and (max-width: 375px) {
+  .route-container {
+    min-height: 200px;
+  }
+
+  .lower-container {
+    min-height: 25vh;
+    font-size: 0.9rem;
+  }
+}

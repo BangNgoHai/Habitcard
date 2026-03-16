@@ -1,4 +1,6 @@
-.performance-container{
+/* Performance Component CSS với Responsive */
+
+.performance-container {
     width: 20%;
     height: 100%;
     background: white;
@@ -8,7 +10,7 @@
     transition: all 0.2s ease;
 }
 
-.performance-header{
+.performance-header {
     height: 8%;
     display: flex;
     align-items: center;
@@ -18,20 +20,20 @@
     letter-spacing: 2px;
     font-weight: 600;
     border-radius: 16px 16px 0 0;
-    background-color:aquamarine;
+    background-color: aquamarine;
 }
 
-.performance-content{
+.performance-content {
     display: flex;
     align-items: center;
     justify-content: center; 
     gap: 10px;
-    height:28%;
+    height: 28%;
     padding: 15px;
     letter-spacing: 1px;
 }
 
-.completed-habits{
+.completed-habits {
     width: 70%;
     height: 100%;
     display: flex;
@@ -42,12 +44,12 @@
     font-weight: 500;
 }
 
-.number{
+.number {
     font-size: 25px;
     font-weight: 400;
 }
 
-.success-rate{
+.success-rate {
     width: 30%;
     height: 100%;
     display: flex;
@@ -57,7 +59,7 @@
     font-weight: 400;
 }
 
-.performance-footer{
+.performance-footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -71,7 +73,7 @@
     letter-spacing: 1px;
 }
 
-.title{
+.title {
     font-size: 13px;
     font-weight: 500;
     height: 20%;
@@ -81,9 +83,153 @@
     color: #666;
 }
 
-.description{
+.description {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: #000;
+}
+
+/* ===== RESPONSIVE CHO IPAD (768px - 1024px) ===== */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .performance-container {
+        width: 25%; /* Tăng width một chút cho iPad */
+        box-shadow: 6px 6px 0 0 #666; /* Shadow nhỏ hơn */
+    }
+    
+    .performance-header {
+        font-size: 9px; /* Font nhỏ hơn một chút */
+        letter-spacing: 1.5px;
+    }
+    
+    .performance-content {
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .completed-habits {
+        font-size: 12px;
+    }
+    
+    .number {
+        font-size: 22px; /* Số nhỏ hơn */
+    }
+    
+    .success-rate {
+        font-size: 18px;
+    }
+    
+    .performance-footer {
+        height: 130px; /* Footer thấp hơn */
+        padding: 6px;
+        font-size: 11px;
+        margin: 8px;
+    }
+    
+    .title {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+}
+
+/* ===== RESPONSIVE CHO IPHONE (tối đa 768px) ===== */
+@media screen and (max-width: 768px) {
+    .performance-container {
+        width: 90%; /* Rộng hơn trên mobile */
+        height: auto;
+        min-height: 300px;
+        margin: 10px auto; /* Canh giữa */
+        box-shadow: 4px 4px 0 0 #666; /* Shadow nhỏ hơn */
+        border-radius: 14px;
+    }
+    
+    .performance-header {
+        height: 12%; /* Tỷ lệ cao hơn một chút */
+        font-size: 10px;
+        padding: 8px 0;
+        border-radius: 14px 14px 0 0;
+    }
+    
+    .performance-content {
+        height: 25%;
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .completed-habits {
+        font-size: 12px;
+    }
+    
+    .number {
+        font-size: 22px; /* Số nhỏ hơn */
+    }
+    
+    .success-rate {
+        font-size: 18px;
+    }
+    
+    .performance-footer {
+        height: auto;
+        min-height: 120px;
+        padding: 8px;
+        font-size: 11px;
+        margin: 8px;
+        border-width: 1.5px; /* Border mỏng hơn */
+    }
+    
+    .title {
+        font-size: 12px;
+        height: 25%;
+        margin-bottom: 10px;
+    }
+    
+    .description {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+/* ===== THÊM CHO MÀN HÌNH RẤT NHỎ (dưới 375px) ===== */
+@media screen and (max-width: 375px) {
+    .performance-container {
+        width: 95%;
+        border-radius: 12px;
+        box-shadow: 3px 3px 0 0 #666;
+    }
+    
+    .performance-header {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+    
+    .performance-content {
+        flex-direction: column; /* Chuyển thành cột nếu quá nhỏ */
+        height: auto;
+        gap: 5px;
+    }
+    
+    .completed-habits {
+        width: 100%;
+        font-size: 11px;
+    }
+    
+    .number {
+        font-size: 20px;
+    }
+    
+    .success-rate {
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+    }
+    
+    .performance-footer {
+        min-height: 100px;
+        padding: 6px;
+    }
+    
+    .title {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
 }
