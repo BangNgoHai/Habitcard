@@ -5,7 +5,7 @@ import './setting.css';
 const Setting = () => {
   return (
     <div className="setting-container">
-        <div className="header">
+        <div className="setting-header">
             <div className="date-range">
                 <button className="arrow-btn arrow-left"></button>
                 <div className="date-display">
@@ -26,7 +26,7 @@ const Setting = () => {
             <Link to="/year">YEAR</Link>
         </div>
 
-        <div className="footer">
+        <div className="setting-footer">
             <button className="habit-manage-btn">MY HABITS 6 MANAGE HABITS </button>
             <button className="streak-count-btn">CURRENT STREAK 0</button>
         </div>

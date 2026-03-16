@@ -17,6 +17,11 @@ body{
   padding: 10px;
   letter-spacing: 0.15rem;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .route-container{
@@ -44,3 +49,5 @@ body{
   gap: 20px;
   padding: 10px;
 }
+
+

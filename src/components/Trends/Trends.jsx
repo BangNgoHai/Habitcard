@@ -4,10 +4,10 @@ import './trends.css';
 const Trends = () => {
   return (
     <div class="trends-container">
-        <div className="header">
-            <h1>📊 WEEKLY TRENDS</h1>
+        <div className="setting-header">
+            <h3>📊 WEEKLY TRENDS</h3>
         </div>
-        <div className="content">
+        <div className="trends-content">
             <div className="column-container">
                 <span className="label">45%</span>
                 <div className="column" style={{ height: '45%' }}></div>

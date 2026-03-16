@@ -4,23 +4,21 @@
     background: white;
     border: 2px solid #666;
     border-radius: 16px;
-    padding: 24px;
+    padding: 17px;
     box-shadow: 8px 8px 0 0 #666;
     transition: all 0.2s ease;
 }
-.header {
+.trends-header {
     text-align: center;
     height: 15%;
-    margin: 0;
 }
 
-.header h1 {
-    font-size: 30px;
+.trends-header h3 {
     color: #333;
     letter-spacing: 2px;
 }
 
-.content {
+.trends-content {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -29,6 +27,7 @@
     padding: 0;
     background-color: #f8f9fa;  /* Nền xám nhạt để thấy rõ vùng content */
     border-radius: 8px;
+    margin-top: 10px;
 }
 
 .column-container {
