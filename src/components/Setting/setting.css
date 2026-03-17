@@ -424,15 +424,19 @@ body {
     }
 }
 
+/* ===== THÊM MEDIA QUERY RIÊNG CHO CÁC IPHONE CỠ TRUNG (376px - 428px) ===== */
+/* Bao gồm iPhone 12 Pro (390px), iPhone 13/14 (390px), iPhone 12/13 Pro Max (428px) */
+@media screen and (min-width: 376px) and (max-width: 428px) {
+    .setting-footer button {
+        padding: 10px 6px;       /* Giảm padding ngang thêm nữa */
+        font-size: 10px;         /* Giảm font size thêm */
+        letter-spacing: 0.5px;   /* Giảm khoảng cách chữ */
+    }
+}
+
 /* ===== GIỮ NGUYÊN RESPONSIVE CŨ CỦA BẠN NHƯNG ĐÃ TỐI ƯU ===== */
 @media (max-width: 600px) {
-    /* Ghi đè hoặc bổ sung cho phần này */
-    .setting-container {
-        /* Giữ nguyên style từ media query trên */
-    }
-
-    /* Chỉ giữ lại những gì cần thiết từ media query cũ */
     .date-display {
-        font-size: 11px; /* Điều chỉnh lại */
+        font-size: 11px;
     }
 }
