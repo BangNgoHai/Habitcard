@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #fae1dd;
   min-height: 100vh;
   min-width: 100vw;
   scroll-behavior: smooth;
@@ -17,6 +16,7 @@ body {
   padding: 10px;
   letter-spacing: 0.15rem;
   font-family: sans-serif;
+  background-color: antiquewhite;
 }
 
 .route-container {

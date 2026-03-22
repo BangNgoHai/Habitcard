@@ -1,0 +1,103 @@
+.week-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.day-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 260px;
+  background: white;
+  border: 2px solid #666;
+  border-radius: 16px;
+  box-shadow: 8px 8px 0 0 #666;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.day-header {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 13px 13px 0 0;
+  background-color:#8DB1D1;
+}
+
+.day-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.day-date {
+  font-size: 10px;
+  color: white;
+}
+
+.habit-list {
+  flex: 1;
+  margin: 10px 0;
+    padding: 16px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 13px;
+  gap: 8px;
+}
+
+.habit-text {
+  flex: 1;
+}
+
+.habit-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #666;
+}
+
+.day-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+  border-top: 1px solid #eee;
+  padding:10px
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .week-container {
+    gap: 16px;
+    padding: 12px;
+  }
+  .day-card {
+    min-width: 200px;
+    padding: 14px;
+  }
+  .day-name {
+    font-size: 16px;
+  }
+  .habit-item {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .day-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

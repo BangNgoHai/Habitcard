@@ -24,7 +24,7 @@ function App() {
         <Performance className="performance" />
       </div>
       <div className="lower-container">
-        this is for the lower container
+        <Week/>
       </div>
     </Router>
   );
